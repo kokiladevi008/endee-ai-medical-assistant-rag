@@ -1,22 +1,52 @@
-“AI-Powered Medical Assistant using Retrieval-Augmented Generation (RAG) and Endee Vector Database”
 
-🩺 AI Medical Assistant using RAG and Endee Vector Database
-A production-style Retrieval-Augmented Generation (RAG) application that answers medical questions by retrieving relevant knowledge from a curated dataset stored in the Endee vector database, then generating a final answer via the Claude LLM.
-📌 Project Overview
-This project demonstrates how to build an end-to-end AI assistant using the RAG pattern — the gold-standard approach for grounding LLM responses in real, domain-specific knowledge rather than relying solely on training data.
-The assistant is specialised for medical information: it can answer questions about symptoms, conditions, treatments, and when to see a doctor — all based on a curated knowledge base of 12 medical conditions.
-🧩 Problem Statement
-General-purpose LLMs (like GPT or Claude) are trained on broad internet data. For sensitive domains like medicine:
-They may give outdated or hallucinated information
-They lack source transparency (you don't know where the answer came from)
-They cannot be easily updated with new or proprietary medical data
-RAG solves this by keeping an external, updatable knowledge base and retrieving the most relevant pieces before generating any answer.
-✅ Solution
-Store a curated medical dataset as vector embeddings in Endee
-When a user asks a question, embed the query and find the most semantically similar chunks in Endee
-Pass the retrieved chunks as context to Claude
-Claude generates a grounded, accurate answer based only on the retrieved information
-🏗️ Architecture
+# 🩺 AI Medical Assistant using RAG 
+
+An AI-powered medical assistant that uses Retrieval-Augmented Generation (RAG) to provide accurate, context-based answers by retrieving relevant medical knowledge from a vector database (Endee) and generating responses using Claude LLM.
+
+---
+
+## 🚀 Features
+- 🔍 Semantic search using embeddings
+- 🧠 RAG-based response generation
+- 🗄️ Endee vector database for storage
+- 🤖 Claude LLM for final answer generation
+- 💬 Streamlit web interface
+- 📚 Curated dataset of 12 medical conditions
+
+---
+
+## 🧩 How It Works
+1. User enters a medical question  
+2. Query is converted into embeddings  
+3. Endee performs similarity search  
+4. Relevant medical context is retrieved  
+5. Context + query sent to Claude  
+6. AI generates final grounded answer  
+
+---
+
+## 🏗️ Architecture
+User → Embedding Model → Endee Vector DB → Context Retrieval → Claude LLM → Answer → Streamlit UI
+
+---
+
+## 📦 Tech Stack
+- Streamlit  
+- Sentence Transformers (all-MiniLM-L6-v2)  
+- Endee Vector Database  
+- Anthropic Claude API  
+- Python  
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/yourusername/ai-medical-assistant
+cd ai-medical-assistant
+pip install -r requirements.txt
+
+## Flow chart
 
 User Question
      │
