@@ -1,3 +1,5 @@
+“AI-Powered Medical Assistant using Retrieval-Augmented Generation (RAG) and Endee Vector Database”
+
 🩺 AI Medical Assistant using RAG and Endee Vector Database
 A production-style Retrieval-Augmented Generation (RAG) application that answers medical questions by retrieving relevant knowledge from a curated dataset stored in the Endee vector database, then generating a final answer via the Claude LLM.
 📌 Project Overview
